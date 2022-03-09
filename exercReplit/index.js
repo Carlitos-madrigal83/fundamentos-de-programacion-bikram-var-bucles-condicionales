@@ -7,7 +7,7 @@ const arr = [1, 2, 3, 4, 5];
 const newArray = arr.map((number, index, array) => {
     return number
 })
-//console.log(newArray)
+console.log(newArray)
 
 // 2- Reciba un array con numbers y strings y devuelva un nuevo array de la misma longitud, pero con los números multiplicados x2.
 // Ejemplo de entrada: [1, 'hello', 2, 3, 'greetings', 4, 'bye!', 5]
@@ -26,23 +26,34 @@ console.log(newArrNumStr)
 //   que estén en posición par deben estar en mayúsculas
 //   Ejemplo de entrada: [1, 'hello', 2, 3, 'greetings', 4, 'bye!', 5]
 //   Ejemplo de salida: [1, 'hello', 2, 3, 'GREETINGS', 4, 'BYE!', 5]
-const arrUpperCase = arrNumStr.filter((number, index, array) => {
-    if
-})
+const arrUpperCase = arrNumStr.map((number, index, array) => typeof number === 'string' && index % 2 === 0 ? number.toUpperCase() : number)
 
-
+console.log(arrUpperCase)
 
 // 4- Reciba un array con numbers y strings y devuelva un nuevo array solo con números
 //   Ejemplo de entrada: [1, 'hello', 2, 3, 'greetings', 4, 'bye!', 5]
 //   Ejemplo de salida: [1, 2, 3, 4, 5]
 
+const arrOnlyNumbers = (prueba) =>{
+    return array = prueba.filter((cho, ri, zo)=>{
+        return typeof cho === 'number'
+    })
+}
+console.log(arrOnlyNumbers(arrNumStr))
+
 // 5- Reciba un array con numbers y strings y devuelva un nuevo array solo con strings cuya longitud sea impar
 //   Ejemplo de entrada: [1, 'hello', 2, 3, 'greetings', 4, 'bye!', 5]
 //   Ejemplo de salida: ['hello', 'greetings']
 
+const strImpar = (arr) => arr.filter((e) => typeof e === 'string' && e.length % 2 !== 0)
+
+console.log(strImpar(arrNumStr))
+
 // 6- Reciba un array con numbers y strings y devuelva un nuevo array con aquellos elementos que, siendo números, sean mayores o iguales a 5 y, siendo strings, sus longitudes sean mayores a 8
 //   Ejemplo de entrada: [1, 'hello', 2, 3, 'greetings', 4, 'bye!', 5]
 //   Ejemplo de salida: ['greetings', 5]
+
+
 
 // 7- Reciba un array con numbers y devuelva la suma de todos ellos
 //    Ejemplo de entrada: [1, 2, 3, 4, 5]
